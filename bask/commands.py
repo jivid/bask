@@ -1,5 +1,6 @@
 import urllib
 
+
 class BaskCommands(object):
     def build_url(self, cmd, args):
         if not hasattr(self, cmd):

@@ -4,6 +4,7 @@ from bask.commands import BaskCommands
 from bask.server import BaskServer
 from flask import Flask, redirect, request
 
+
 class Commands(BaskCommands):
     def mdn(self, args):
         mdn_base = 'developer.mozilla.org/en-US/docs/Web'
@@ -38,6 +39,7 @@ class Commands(BaskCommands):
 db = os.path.abspath('bask.db')
 bask = BaskServer(db, Commands())
 app = Flask('BaskServer')
+
 
 @app.route('/')
 def serve():

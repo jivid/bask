@@ -7,6 +7,7 @@ from db import BaseModel, Session
 from decorators import cache
 from models import CommandModel
 
+
 class BaskServer(object):
     FALLBACK_URL = "http://google.com/search?q="
 
@@ -48,4 +49,3 @@ class BaskServer(object):
             matching_keys.append(row)
 
         return matching_keys[0] if matching_keys else None
-
